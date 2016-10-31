@@ -60,7 +60,7 @@ class TwitterClient: BDBOAuth1SessionManager {
         
         get("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response:Any?) in
             let dictionaries = response as! [NSDictionary]
-            
+            //print(dictionaries)
             let tweets = Tweet.tweetsWithArray(dictionaries: dictionaries)
             
             success(tweets)
