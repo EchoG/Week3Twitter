@@ -1,5 +1,4 @@
 # TwitterClient
-# Week3T
 
 ## Time spent: 19 hours spent in total
 
