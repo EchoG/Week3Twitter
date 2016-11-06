@@ -23,7 +23,7 @@ class Tweet: NSObject {
         tweet_id = dictionary["id_str"] as? String as NSString?
         
         let timestampString = dictionary["created_at"] as? String
-        print(timestampString)
+        //print(timestampString)
         
         if let timestampString = timestampString{
             let formatter = DateFormatter()

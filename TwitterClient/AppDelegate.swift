@@ -17,12 +17,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //let hamburgerViewController = window!.rootViewController as! HamburgerViewController
         
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let hamburgerViewController = storyboard.instantiateViewController(withIdentifier: "hamburgerViewController") as! HamburgerViewController
+//        let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+//        
+//        menuViewController.hamburghViewController = hamburgerViewController
+//        
+//        hamburgerViewController.menuViewController = menuViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let hamburgerViewController = storyboard.instantiateViewController(withIdentifier: "hamburgerViewController") as! HamburgerViewController
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+        
+        menuViewController.hamburghViewController = hamburgerViewController
+        
+        hamburgerViewController.menuViewController = menuViewController
+
         if User.currentUser != nil {
             print("There is a current user")
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
-            window?.rootViewController = vc
+            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //let vc = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
+            //let vc = storyboard.instantiateViewController(withIdentifier: "hamburgerViewController")
+            //window?.rootViewController = vc
+            
+            window?.rootViewController = hamburgerViewController
+            
+            
         }else{
             print("There is no current user")
         }

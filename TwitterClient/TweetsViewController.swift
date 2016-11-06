@@ -88,6 +88,12 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    @IBAction func imageOnTap(_ sender: UITapGestureRecognizer) {
+        print("tap")
+        let touchPoint: CGPoint = sender.location(in: sender.view)
+        self.performSegue(withIdentifier: "profileViewSegue", sender: touchPoint)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TweetDetail" {
             let nav = segue.destination as! UINavigationController
@@ -95,8 +101,16 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             var indexPath = tweetsTableView.indexPath(for: sender as! UITableViewCell)
             var tweet = tweets[(indexPath?.row)!]
             vc.tweet = tweet
+        } else if segue.identifier == "profileViewSegue" {
+            let nav = segue.destination as! UINavigationController
+            let vc = nav.topViewController as! ProfileViewController
+            //var indexPath = tweetsTableView.indexPath(for: sender as! UITableViewCell)
+            var indexPath = tweetsTableView.indexPathForRow(at: sender as! CGPoint)
+            var tweet = tweets[(indexPath?.row)!]
+            vc.user = tweet.user
         }
         
     }
+    
 
 }
