@@ -15,6 +15,7 @@
 Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/EchoG/Week3Twitter/blob/master/TwitterClient.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 # Week4
@@ -37,6 +38,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/EchoG/Week3Twitter/blob/master/TwitterClient2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ```
 
